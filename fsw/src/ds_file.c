@@ -850,7 +850,7 @@ void DS_FileCloseDest(int32 FileIndex)
                     /*
                     ** Use OS function to move/rename the file...
                     */
-                    OS_result = OS_mv(FileStatus->FileName, PathName);
+                    OS_result = OS_rename(FileStatus->FileName, PathName);
 
                     if (OS_result != OS_SUCCESS)
                     {
